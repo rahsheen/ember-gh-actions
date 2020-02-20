@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v2
     - name: GitHub Action for Ember Testing
       uses: alexlafroscia/actions-ember-testing@v1.0.0
     - name: Run a multi-line script
