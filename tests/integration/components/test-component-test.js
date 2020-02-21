@@ -12,7 +12,7 @@ module('Integration | Component | test-component', function(hooks) {
 
     await render(hbs`<TestComponent />`);
 
-    assert.equal(this.element.textContent.trim(), 'This is Weird');
+    assert.equal(this.element.textContent.toLocaleLowerCase().trim(), 'this is weird');
 
     // Template block usage:
     await render(hbs`
@@ -21,6 +21,6 @@ module('Integration | Component | test-component', function(hooks) {
       </TestComponent>
     `);
 
-    assert.equal(this.element.textContent.trim(), 'This is Weird');
+    assert.equal(this.element.textContent.toLocaleLowerCase().trim(), 'this is weird')
   });
 });
