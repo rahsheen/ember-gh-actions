@@ -9,9 +9,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
-    - uses: mydea/actions-ember-testing@v1
+    - name: Setup for Ember tests
+      uses: mydea/actions-ember-testing@v2.0.0
     - name: Install dependencies
-      run: yarn install
+      run: npm ci
     - uses: mydea/ember-cli-code-coverage-action@v1
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
