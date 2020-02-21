@@ -16,4 +16,4 @@ jobs:
     - uses: mydea/ember-cli-code-coverage-action@v1
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        test-command: "npm test"
+        test-command: "npm test-coverage"
