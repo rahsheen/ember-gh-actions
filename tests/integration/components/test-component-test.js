@@ -12,15 +12,15 @@ module('Integration | Component | test-component', function(hooks) {
 
     await render(hbs`<TestComponent />`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.textContent.trim(), 'This is Weird');
 
     // Template block usage:
     await render(hbs`
       <TestComponent>
-        template block text
+        This is Weird
       </TestComponent>
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(this.element.textContent.trim(), 'This is Weird');
   });
 });
